@@ -13,8 +13,7 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\vova1\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\vova1\\.nuget\\packages",
-      "E:\\Program files\\VS\\VSDate\\Shared\\NuGetPackages"
+      "C:\\Users\\vova1\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

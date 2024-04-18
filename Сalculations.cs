@@ -67,7 +67,7 @@ namespace Monte_Carlo
         public CalcTree(string expr) {
             RootNode = MakeTree(expr);
         }
-        public double Eval(float x)
+        public double Eval(float x = 1)
         {
             return RootNode.Eval(x);
         }

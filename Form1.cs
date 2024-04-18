@@ -12,7 +12,8 @@ namespace Monte_Carlo
             if (EvalModeBox.Checked)
             {
                 CalcTree ExprTree = new CalcTree(expressionTB.Text.Replace(" ", ""));
-                EqRes.Text = "Result = " + (Math.Round(ExprTree.Eval(float.Parse(lowerLim.Text)), 4)).ToString();
+                if(lowerLim.Text != "") EqRes.Text = "Result = " + (Math.Round(ExprTree.Eval(float.Parse(lowerLim.Text)), 4)).ToString();
+                else EqRes.Text = "Result = " + (Math.Round(ExprTree.Eval(), 4)).ToString();
             }
             else
             {
