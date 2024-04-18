@@ -1,0 +1,16 @@
+D:\Coding\Cpp_prac\Monte-Carlo\bin\Debug\net8.0-windows\Monte-Carlo.exe
+D:\Coding\Cpp_prac\Monte-Carlo\bin\Debug\net8.0-windows\Monte-Carlo.deps.json
+D:\Coding\Cpp_prac\Monte-Carlo\bin\Debug\net8.0-windows\Monte-Carlo.runtimeconfig.json
+D:\Coding\Cpp_prac\Monte-Carlo\bin\Debug\net8.0-windows\Monte-Carlo.dll
+D:\Coding\Cpp_prac\Monte-Carlo\bin\Debug\net8.0-windows\Monte-Carlo.pdb
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte_Carlo.Form1.resources
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.csproj.GenerateResource.cache
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.AssemblyInfoInputs.cache
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.AssemblyInfo.cs
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.csproj.CoreCompileInputs.cache
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.dll
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\refint\Monte-Carlo.dll
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.pdb
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.genruntimeconfig.cache
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\ref\Monte-Carlo.dll
