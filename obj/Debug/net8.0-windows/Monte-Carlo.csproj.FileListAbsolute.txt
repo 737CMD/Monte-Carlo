@@ -31,3 +31,7 @@ D:\coding\Monte-Carlo\bin\Debug\net8.0-windows\Monte-Carlo.dll
 D:\coding\Monte-Carlo\bin\Debug\net8.0-windows\Monte-Carlo.pdb
 D:\coding\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.genruntimeconfig.cache
 D:\coding\Monte-Carlo\obj\Debug\net8.0-windows\ref\Monte-Carlo.dll
+D:\coding\Monte-Carlo\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilities.dll
+D:\coding\Monte-Carlo\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
+D:\coding\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.csproj.AssemblyReference.cache
+D:\coding\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Ca.32438FF6.Up2Date
