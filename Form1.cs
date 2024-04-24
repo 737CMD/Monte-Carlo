@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms.DataVisualization.Charting;
+
 namespace Monte_Carlo
 {
     public partial class Form1 : Form
@@ -6,12 +9,32 @@ namespace Monte_Carlo
         {
             InitializeComponent();
         }
+        private void DrawChart(CalcTree tree, float x1, float x2)
+        {
+            Ichart.Series.Clear();
+            Series series = new Series();
+            series.ChartType = SeriesChartType.Line;
+            series.LegendText = "Plot of " + expressionTB.Text;
+            Ichart.ChartAreas[0].AxisX.Minimum = x1 - (x2 - x1) / 10;
+            Ichart.ChartAreas[0].AxisX.Maximum = x2 + (x2 - x1) / 10;
+            Ichart.Series.Add(series);
 
+            // Calculate step size based on interval between x1 and x2
+            float step = (x2 - x1) / 1000;
+
+            // Add points to the series
+            for (float x = x1; x <= x2; x += step)
+            {
+                if (x == 0) continue;
+                double y = tree.Eval(x); // calculate y for each x
+                series.Points.AddXY(x, y);
+            }
+        }
         private void Calculate_Click(object sender, EventArgs e)
         {
+            CalcTree ExprTree = new CalcTree(expressionTB.Text.Replace(" ", ""));
             if (EvalModeBox.Checked)
             {
-                CalcTree ExprTree = new CalcTree(expressionTB.Text.Replace(" ", ""));
                 if(lowerLim.Text != "") EqRes.Text = "Result = " + (Math.Round(ExprTree.Eval(float.Parse(lowerLim.Text)), 4)).ToString();
                 else EqRes.Text = "Result = " + (Math.Round(ExprTree.Eval(), 4)).ToString();
             }
@@ -21,17 +44,19 @@ namespace Monte_Carlo
                 float uplimit = float.Parse(upperLim.Text);
                 float eps = float.Parse(resTb.Text);
                 int points = pointsBar.Value;
-                lowerLim.Enabled = false;
-                upperLim.Enabled = false;
-                resTb.Enabled = false;
-                pointsBar.Enabled = false;
-            }
-            /*lowerLim.Enabled = true;
-            upperLim.Enabled = true;
-            resTb.Enabled = true;
-            pointsBar.Enabled = true;*/
+                evalmode();
+                DrawChart(ExprTree, lowlimit, uplimit);
+                Task MCeval = Task.Factory.StartNew(delegate () { MC_eval.Calc(lowlimit, uplimit, ExprTree, eps, points, this); });
+            }            
         }
-
+        public void evalmode()
+        {
+            lowerLim.Enabled = !(lowerLim.Enabled);
+            upperLim.Enabled = !(upperLim.Enabled);
+            resTb.Enabled = !(resTb.Enabled);
+            pointsBar.Enabled = !(pointsBar.Enabled);
+            Calculate.Enabled = !(Calculate.Enabled);
+        }
         private void pointsBar_Scroll(object sender, EventArgs e)
         {
             Points_per_cycle.Text = "Points per cycle: " + (pointsBar.Value * 1000).ToString();
@@ -57,6 +82,11 @@ namespace Monte_Carlo
                 pointsBar.Visible = true;
                 Points_per_cycle.Visible = true;
             }
+        }
+        public string EqResText
+        {
+            get => EqRes.Text; 
+            set => EqRes.Text = value;
         }
     }
 }
