@@ -81,17 +81,17 @@ namespace Monte_Carlo
                 if (expr[i] == '(') { openPar++; continue; }
                 if (expr[i] == ')') 
                 { 
-                    if (i == expr.Length - 1) return MakeTree(expr.Remove(expr.Length-1, 1).Remove(0,1));
+                    if (i == expr.Length - 1 && k == 0) return MakeTree(expr.Remove(expr.Length-1, 1).Remove(0,1));
                     else openPar--; continue; 
                 }
                 if (openPar != 0)  continue;
-                if(Prior(expr[i]) < currprior)
+                if(Prior(expr[i]) <= currprior)
                 {
                     k = i;
                     currprior = Prior(expr[i]);
                 }
             }
-            if(k == 0)
+            if(k == expr.Length-1)
             {
                 if (expr[k] == 'x')
                 {

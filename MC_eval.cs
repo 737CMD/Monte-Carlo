@@ -64,7 +64,7 @@ namespace Monte_Carlo
                 }
                 Task.WaitAll(workers);
                 delta = p - (float)spoints / points;
-                p -= delta;
+                p -= delta;s
                 delta = Math.Abs(delta);
                 Action formupd = delegate ()
                 {
@@ -73,7 +73,7 @@ namespace Monte_Carlo
                     form.IterTickText = "Current result " + Math.Round((s * p + min*(uplimit - lowlimit)), digits).ToString();
                 };
                 form.Invoke(formupd);
-                Thread.Sleep(1000);
+                //Thread.Sleep(100);
             }
             while(eps<delta);
             Action finish = form.evalmode;
