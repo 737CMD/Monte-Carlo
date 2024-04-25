@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E4mO/s4dA1XzKEeoXxW2eqj2c60EEtnPE7xceyYZSwad+Ls971dbSvzFbkmH2BhJyfHdfktbsRflNU6R6xDpYw==",
+  "dgSpecHash": "H6lL/858+rA7scAEz2O/I9W99/ptvObI3QaaRZx86FJ20ZlAJQlz2C2hvNaxtgDkIVxOhTcuOdX/vi93DBuFwQ==",
   "success": true,
-  "projectFilePath": "D:\\Coding\\Cpp_prac\\Monte-Carlo\\Monte-Carlo.csproj",
+  "projectFilePath": "D:\\coding\\Monte-Carlo\\Monte-Carlo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vova1\\.nuget\\packages\\winforms.datavisualization\\1.9.2\\winforms.datavisualization.1.9.2.nupkg.sha512"
   ],

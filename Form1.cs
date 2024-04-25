@@ -59,12 +59,18 @@ namespace Monte_Carlo
                 float eps = float.Parse(resTb.Text);
                 int points = pointsBar.Value;
                 evalmode();
+                Update();
                 DrawChart(ExprTree, lowlimit, uplimit);
-                Task MCeval = Task.Factory.StartNew(delegate () { MC_eval.Calc(lowlimit, uplimit, ExprTree, eps, points, this); });
+                if (threadNumb.Text != "") { Task MCeval = Task.Factory.StartNew(delegate () { MC_eval.Calc(lowlimit, uplimit, ExprTree, eps, points, this, demCB.Checked, haMode.Checked, int.Parse(threadNumb.Text)); }); }
+                else { Task MCeval = Task.Factory.StartNew(delegate () { MC_eval.Calc(lowlimit, uplimit, ExprTree, eps, points, this, demCB.Checked, haMode.Checked); }); }
             }            
         }
         public void evalmode()
         {
+            demCB.Enabled = !(demCB.Enabled);
+            haMode.Enabled = !(haMode.Enabled);
+            EvalModeBox.Enabled = !(EvalModeBox.Enabled);
+            threadNumb.Enabled = !(threadNumb.Enabled);
             expressionTB.Enabled = !(expressionTB.Enabled);
             lowerLim.Enabled = !(lowerLim.Enabled);
             upperLim.Enabled = !(upperLim.Enabled);

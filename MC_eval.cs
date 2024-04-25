@@ -39,7 +39,7 @@ namespace Monte_Carlo
             }
             return (minVal, maxVal);
         }
-        public static void Calc(float lowlimit, float uplimit, CalcTree ExprTree, float eps, int pd, Form1 form)
+        public static void Calc(float lowlimit, float uplimit, CalcTree ExprTree, float eps, int pd, Form1 form, bool dem, bool ha, int N = 3)
         {
             double min, max;
             (min, max) = FindMinMax(lowlimit, uplimit, ExprTree, eps);
@@ -47,9 +47,9 @@ namespace Monte_Carlo
             float p = 0;
             int points = 0;
             int spoints = 0;
-            float delta = 0;
-            int N = 3;
+            float delta = 0, delta2 = 0, delta3 = 0;
             int digits = 0;
+            bool con = true;
             int iterpoints = (int)Math.Round((uplimit - lowlimit) * pd/N);
             while (Math.Pow(10, (-1) * digits) > eps) digits++;
             List<mcPoint> newPointlist = new List<mcPoint>();
@@ -63,19 +63,24 @@ namespace Monte_Carlo
                     points += iterpoints;
                 }
                 Task.WaitAll(workers);
+                if (ha) { delta3 = delta2; delta2 = delta; }
                 delta = p - (float)spoints / points;
-                p -= delta;s
+                p -= delta;
                 delta = Math.Abs(delta);
                 Action formupd = delegate ()
                 {
                     form.DrawPoint(newPointlist);
                     form.EqResText = "Points on plot: " + points.ToString();
                     form.IterTickText = "Current result " + Math.Round((s * p + min*(uplimit - lowlimit)), digits).ToString();
+                    form.Update();
                 };
                 form.Invoke(formupd);
-                //Thread.Sleep(100);
+                if(dem) Thread.Sleep(500);
+                Debug.WriteLine(delta*s + " " + delta2*s + " " + delta3*s);
+                if (ha) con = delta3*s > eps || delta2*s > eps || delta*s > eps;
+                else con = delta*s > eps;
             }
-            while(eps<delta);
+            while(con);
             Action finish = form.evalmode;
             form.Invoke(finish);
         }

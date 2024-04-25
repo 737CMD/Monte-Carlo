@@ -80,24 +80,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vova1\\.nuget\\packages\\": {},
-    "E:\\Program files\\VS\\VSDate\\Shared\\NuGetPackages": {}
+    "C:\\Users\\vova1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Coding\\Cpp_prac\\Monte-Carlo\\Monte-Carlo.csproj",
+      "projectUniqueName": "D:\\coding\\Monte-Carlo\\Monte-Carlo.csproj",
       "projectName": "Monte-Carlo",
-      "projectPath": "D:\\Coding\\Cpp_prac\\Monte-Carlo\\Monte-Carlo.csproj",
+      "projectPath": "D:\\coding\\Monte-Carlo\\Monte-Carlo.csproj",
       "packagesPath": "C:\\Users\\vova1\\.nuget\\packages\\",
-      "outputPath": "D:\\Coding\\Cpp_prac\\Monte-Carlo\\obj\\",
+      "outputPath": "D:\\coding\\Monte-Carlo\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "E:\\Program files\\VS\\VSDate\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\vova1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -105,7 +100,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -153,7 +147,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
