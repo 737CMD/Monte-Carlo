@@ -54,10 +54,9 @@
             // Calculate
             // 
             Calculate.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Calculate.Location = new Point(737, 412);
-            Calculate.Margin = new Padding(3, 4, 3, 4);
+            Calculate.Location = new Point(645, 309);
             Calculate.Name = "Calculate";
-            Calculate.Size = new Size(134, 71);
+            Calculate.Size = new Size(117, 53);
             Calculate.TabIndex = 0;
             Calculate.Text = "Calculate ";
             Calculate.UseVisualStyleBackColor = true;
@@ -67,55 +66,52 @@
             // 
             EqRes.AutoSize = true;
             EqRes.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EqRes.Location = new Point(877, 449);
+            EqRes.Location = new Point(767, 337);
             EqRes.Name = "EqRes";
-            EqRes.Size = new Size(0, 24);
+            EqRes.Size = new Size(0, 18);
             EqRes.TabIndex = 1;
             // 
             // expressionTB
             // 
             expressionTB.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            expressionTB.Location = new Point(737, 40);
-            expressionTB.Margin = new Padding(3, 4, 3, 4);
+            expressionTB.Location = new Point(645, 30);
             expressionTB.Name = "expressionTB";
-            expressionTB.Size = new Size(349, 34);
+            expressionTB.Size = new Size(306, 29);
             expressionTB.TabIndex = 2;
             // 
             // Tip
             // 
             Tip.AutoSize = true;
             Tip.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Tip.Location = new Point(737, 12);
+            Tip.Location = new Point(645, 9);
             Tip.Name = "Tip";
-            Tip.Size = new Size(160, 24);
+            Tip.Size = new Size(128, 18);
             Tip.TabIndex = 3;
             Tip.Text = "Your expression:";
             // 
             // lowerLim
             // 
             lowerLim.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lowerLim.Location = new Point(737, 146);
-            lowerLim.Margin = new Padding(3, 4, 3, 4);
+            lowerLim.Location = new Point(645, 110);
             lowerLim.Name = "lowerLim";
-            lowerLim.Size = new Size(133, 34);
+            lowerLim.Size = new Size(117, 29);
             lowerLim.TabIndex = 4;
             // 
             // upperLim
             // 
             upperLim.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            upperLim.Location = new Point(953, 146);
-            upperLim.Margin = new Padding(3, 4, 3, 4);
+            upperLim.Location = new Point(834, 110);
             upperLim.Name = "upperLim";
-            upperLim.Size = new Size(133, 34);
+            upperLim.Size = new Size(117, 29);
             upperLim.TabIndex = 5;
             // 
             // Limits_of_integration
             // 
             Limits_of_integration.AutoSize = true;
             Limits_of_integration.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Limits_of_integration.Location = new Point(737, 118);
+            Limits_of_integration.Location = new Point(645, 88);
             Limits_of_integration.Name = "Limits_of_integration";
-            Limits_of_integration.Size = new Size(201, 24);
+            Limits_of_integration.Size = new Size(156, 18);
             Limits_of_integration.TabIndex = 6;
             Limits_of_integration.Text = "Limits of integration:";
             // 
@@ -123,29 +119,28 @@
             // 
             Residual.AutoSize = true;
             Residual.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Residual.Location = new Point(737, 220);
+            Residual.Location = new Point(645, 165);
             Residual.Name = "Residual";
-            Residual.Size = new Size(94, 24);
+            Residual.Size = new Size(73, 18);
             Residual.TabIndex = 7;
             Residual.Text = "Residual:";
             // 
             // resTb
             // 
             resTb.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            resTb.Location = new Point(737, 248);
-            resTb.Margin = new Padding(3, 4, 3, 4);
+            resTb.Location = new Point(645, 186);
             resTb.Name = "resTb";
-            resTb.Size = new Size(133, 34);
+            resTb.Size = new Size(117, 29);
             resTb.TabIndex = 8;
             // 
             // pointsBar
             // 
             pointsBar.LargeChange = 1;
-            pointsBar.Location = new Point(737, 332);
-            pointsBar.Margin = new Padding(3, 4, 3, 4);
+            pointsBar.Location = new Point(645, 249);
+            pointsBar.Maximum = 20;
             pointsBar.Minimum = 1;
             pointsBar.Name = "pointsBar";
-            pointsBar.Size = new Size(350, 56);
+            pointsBar.Size = new Size(306, 45);
             pointsBar.TabIndex = 9;
             pointsBar.TabStop = false;
             pointsBar.Value = 1;
@@ -155,29 +150,28 @@
             // 
             Points_per_cycle.AutoSize = true;
             Points_per_cycle.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Points_per_cycle.Location = new Point(737, 304);
+            Points_per_cycle.Location = new Point(645, 228);
             Points_per_cycle.Name = "Points_per_cycle";
-            Points_per_cycle.Size = new Size(266, 24);
+            Points_per_cycle.Size = new Size(176, 18);
             Points_per_cycle.TabIndex = 10;
-            Points_per_cycle.Text = "Points per cycle per 10: 1000";
+            Points_per_cycle.Text = "Points per cycle per 1: 1";
             // 
             // IterTicker
             // 
             IterTicker.AutoSize = true;
             IterTicker.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            IterTicker.Location = new Point(877, 412);
+            IterTicker.Location = new Point(767, 309);
             IterTicker.Name = "IterTicker";
-            IterTicker.Size = new Size(0, 24);
+            IterTicker.Size = new Size(0, 18);
             IterTicker.TabIndex = 11;
             // 
             // EvalModeBox
             // 
             EvalModeBox.AutoSize = true;
             EvalModeBox.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            EvalModeBox.Location = new Point(741, 87);
-            EvalModeBox.Margin = new Padding(3, 4, 3, 4);
+            EvalModeBox.Location = new Point(648, 65);
             EvalModeBox.Name = "EvalModeBox";
-            EvalModeBox.Size = new Size(107, 24);
+            EvalModeBox.Size = new Size(88, 20);
             EvalModeBox.TabIndex = 12;
             EvalModeBox.Text = "EvalMode";
             EvalModeBox.UseVisualStyleBackColor = true;
@@ -189,17 +183,18 @@
             Ichart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             Ichart.Legends.Add(legend1);
-            Ichart.Location = new Point(12, 12);
+            Ichart.Location = new Point(10, 9);
+            Ichart.Margin = new Padding(3, 2, 3, 2);
             Ichart.Name = "Ichart";
-            Ichart.Size = new Size(719, 514);
+            Ichart.Size = new Size(629, 386);
             Ichart.TabIndex = 13;
             Ichart.Text = "Ichart";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1114, 538);
+            ClientSize = new Size(975, 404);
             Controls.Add(Ichart);
             Controls.Add(EvalModeBox);
             Controls.Add(IterTicker);
@@ -215,7 +210,6 @@
             Controls.Add(EqRes);
             Controls.Add(Calculate);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "Form1";
             Text = "Monte-Carlo";

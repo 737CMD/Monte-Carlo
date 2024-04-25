@@ -35,3 +35,8 @@ D:\coding\Monte-Carlo\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilit
 D:\coding\Monte-Carlo\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
 D:\coding\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.csproj.AssemblyReference.cache
 D:\coding\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Ca.32438FF6.Up2Date
+D:\Coding\Cpp_prac\Monte-Carlo\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilities.dll
+D:\Coding\Cpp_prac\Monte-Carlo\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.csproj.AssemblyReference.cache
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Carlo.sourcelink.json
+D:\Coding\Cpp_prac\Monte-Carlo\obj\Debug\net8.0-windows\Monte-Ca.32438FF6.Up2Date

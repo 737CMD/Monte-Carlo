@@ -11,14 +11,20 @@ namespace Monte_Carlo
         }
         private void DrawChart(CalcTree tree, float x1, float x2)
         {
-            Ichart.Series.Clear();
             Series series = new Series();
             series.ChartType = SeriesChartType.Line;
+            series.BorderWidth = 3;
             series.LegendText = "Plot of " + expressionTB.Text;
             Ichart.ChartAreas[0].AxisX.Minimum = x1 - (x2 - x1) / 10;
             Ichart.ChartAreas[0].AxisX.Maximum = x2 + (x2 - x1) / 10;
             Ichart.Series.Add(series);
-
+            Series points = new Series();
+            points.ChartType = SeriesChartType.Point;
+            points.MarkerSize = 3;
+            points.LegendText = "Random points";
+            points.Color = Color.Black;
+            series.Color = Color.Red;
+            Ichart.Series.Add(points);
             // Calculate step size based on interval between x1 and x2
             float step = (x2 - x1) / 1000;
 
@@ -30,8 +36,16 @@ namespace Monte_Carlo
                 series.Points.AddXY(x, y);
             }
         }
+        internal void DrawPoint(List<mcPoint> points)
+        {
+            foreach (mcPoint p in points)
+            {
+                Ichart.Series[1].Points.AddXY(p.X, p.Y);
+            }
+        }
         private void Calculate_Click(object sender, EventArgs e)
         {
+            Ichart.Series.Clear();
             CalcTree ExprTree = new CalcTree(expressionTB.Text.Replace(" ", ""));
             if (EvalModeBox.Checked)
             {
@@ -51,6 +65,7 @@ namespace Monte_Carlo
         }
         public void evalmode()
         {
+            expressionTB.Enabled = !(expressionTB.Enabled);
             lowerLim.Enabled = !(lowerLim.Enabled);
             upperLim.Enabled = !(upperLim.Enabled);
             resTb.Enabled = !(resTb.Enabled);
@@ -59,7 +74,7 @@ namespace Monte_Carlo
         }
         private void pointsBar_Scroll(object sender, EventArgs e)
         {
-            Points_per_cycle.Text = "Points per cycle: " + (pointsBar.Value * 1000).ToString();
+            Points_per_cycle.Text = "Points per cycle per 1: " + (pointsBar.Value).ToString();
         }
 
         private void EvalModeBox_CheckedChanged(object sender, EventArgs e)
@@ -87,6 +102,11 @@ namespace Monte_Carlo
         {
             get => EqRes.Text; 
             set => EqRes.Text = value;
+        }
+        public string IterTickText
+        {
+            get => IterTicker.Text;
+            set => IterTicker.Text = value;
         }
     }
 }
